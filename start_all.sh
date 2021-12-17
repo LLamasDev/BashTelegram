@@ -2,15 +2,15 @@
 
 function funcion() {
   { # try
-    /bot/ProyectoDAM/start.sh 'resultadosfutbol'
+    /bot/BashTelegram/start.sh 'resultadosfutbol'
     echo''
-    /bot/ProyectoDAM/start.sh 'supercell'
+    /bot/BashTelegram/start.sh 'supercell'
     echo''
-    /bot/ProyectoDAM/start.sh 'clashroyale'
+    /bot/BashTelegram/start.sh 'clashroyale'
     echo''
-    /bot/ProyectoDAM/start.sh 'clashofclans'
+    /bot/BashTelegram/start.sh 'clashofclans'
     echo''
-    sleep 10 # Paramos 10 segundos para esperar el arranque del proceso
+    sleep 5 # Paramos 10 segundos para esperar el arranque del proceso
 
     proceso=$(ps -ef | grep -i "resultadosfutbol\|supercell\|clashroyale\|clashofclans" | grep -iv "screen\|grep\|networkd" | wc -l) # Contador para saber si esta corriendo
 

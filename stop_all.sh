@@ -3,14 +3,14 @@
 function funcion() {
   { # try
     /bot/ProyectoDAM/stop.sh 'resultadosfutbol'
-    echo ''
+    sleep 2
     /bot/ProyectoDAM/stop.sh 'supercell'
-    echo ''
+    sleep 2
     /bot/ProyectoDAM/stop.sh 'clashroyale'
-    echo''
+    sleep 2
     /bot/ProyectoDAM/stop.sh 'clashofclans'
     echo''
-    sleep 10 # Paramos 10 segundos para esperar la parada del proceso
+    sleep 2 # Paramos 10 segundos para esperar la parada del proceso
 
     proceso=$(ps -ef | grep -i "resultadosfutbol\|supercell\|clashroyale\|clashofclans" | grep -iv "screen\|grep\|networkd" | wc -l) # Contador para saber si esta corriendo
 
