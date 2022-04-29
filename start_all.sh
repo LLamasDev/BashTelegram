@@ -2,8 +2,6 @@
 
 function funcion() {
   { # try
-    /bot/BashTelegram/start.sh 'resultadosfutbol'
-    echo''
     /bot/BashTelegram/start.sh 'supercell'
     echo''
     /bot/BashTelegram/start.sh 'clashroyale'
@@ -12,9 +10,9 @@ function funcion() {
     echo''
     sleep 5 # Paramos 10 segundos para esperar el arranque del proceso
 
-    proceso=$(ps -ef | grep -i "resultadosfutbol\|supercell\|clashroyale\|clashofclans" | grep -iv "screen\|grep\|networkd" | wc -l) # Contador para saber si esta corriendo
+    proceso=$(ps -ef | grep -i "supercell\|clashroyale\|clashofclans" | grep -iv "screen\|grep\|networkd" | wc -l) # Contador para saber si esta corriendo
 
-    if [ $proceso -eq 4 ]; then # Si el contador del proceso es 3 significa que estan corriendo los procesos
+    if [ $proceso -eq 3 ]; then # Si el contador del proceso es 3 significa que estan corriendo los procesos
       echo 'Arrancado todos los procesos correctamente.'
     else # El contador de procesos no es 3 significa que no esta corriendo
       echo "No se ha arrancado todos los procesos correctamente."
