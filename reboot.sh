@@ -4,7 +4,7 @@ primer_ag=$1 # Primer argumento
 
 function funcion() {
     { # try
-        limpiardead=$(screen -wipe) # Elimino los DEAD
+        limpiar_dead=$(screen -wipe) # Elimino los DEAD
         proceso_existe=$(ps -ef | grep -i $primer_ag.py | grep -iv "screen\|grep\|networkd" | wc -l) # Contador para saber si esta corriendo
 
         if [ $proceso_existe -eq 1 ]; then # Si el contador del proceso es 1 significa que existe
